@@ -18,7 +18,7 @@ public class MainController {
      @Autowired
      UserService userService;
 
-  public  ArrayList<User> user= new ArrayList<User>();
+//  public  ArrayList<User> user= new ArrayList<User>();
 
 
     @RequestMapping(value = "/mainpage")
@@ -40,6 +40,12 @@ public class MainController {
     public  void  deleteInfo(@RequestBody String email){
         System.out.println(email);
         userService.deleteInfo(email);
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value = "mainpage/search")
+    public List search(@RequestBody String searchName){
+        List<User> searchedList=userService.searchedUser(searchName);
+        return searchedList;
     }
 
 

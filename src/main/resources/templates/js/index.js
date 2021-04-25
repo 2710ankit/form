@@ -97,3 +97,29 @@ function del(delBtn){
 
 
 }
+function searchFun(){
+    var search= document.getElementById('search').value;
+    if(search == ""){
+        return;
+    }
+    var Parent = document.getElementById('table');
+    while(Parent.hasChildNodes())
+    {
+        Parent.removeChild(Parent.firstChild);
+    }
+    var xhr= new XMLHttpRequest();
+    xhr.open("POST","http://localhost:8080/mainpage/search");
+    xhr.onreadystatechange = function (){
+        if(this.readyState == 4 && this.status==200){
+            var data= JSON.parse(this.responseText);
+            for(var i=0;i<data.length;i++){
+                showall(data[i]);
+            }
+
+        }
+        else{
+            console.log(this.readyState);
+        }
+    }
+    xhr.send(search);
+}

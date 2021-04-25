@@ -31,4 +31,7 @@ public class UserService {
         return  userRepository.checkUser();
     }
 
+    public List<User> searchedUser(String searchName) {
+        return userRepository.searchedUser(searchName);
+    }
 }

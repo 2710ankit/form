@@ -18,7 +18,6 @@ public class UserRepository {
         EntityTransaction entityTransaction= entityManager.getTransaction();
         TypedQuery<User> query=entityManager.createQuery("SELECT u FROM User u",User.class);
         List<User> user=query.getResultList();
-        System.out.println(user);
         return user;
 
 
@@ -65,4 +64,11 @@ public class UserRepository {
         return userPresent;
     }
 
+    public List<User> searchedUser(String searchName) {
+        EntityManager entityManager= entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction= entityManager.getTransaction();
+        TypedQuery<User> query=entityManager.createQuery("SELECT u FROM User u WHERE u.name= :searchName",User.class).setParameter("searchName",searchName);
+        List<User> user=query.getResultList();
+        return user;
+    }
 }
