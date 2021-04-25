@@ -59,23 +59,23 @@ public class UserRepository {
           entityTransaction.rollback();
       }
     }
-
-    public boolean findByEmail(String email) {
-        EntityManager entityManager= entityManagerFactory.createEntityManager();
-        try{
-
-            TypedQuery<User> query=entityManager.createQuery("SELECT u FROM User u WHERE u.email= :email",User.class).setParameter("email", email);
-            System.out.println(query.getResultList()+"***"+email);
-            return true;
-
-
-
-        }
-        catch (Exception e){
-            System.out.println(e);
-            return true;
-        }
-
-
-    }
+//
+//    public boolean findByEmail(String email) {
+//        EntityManager entityManager= entityManagerFactory.createEntityManager();
+//        try{
+//
+//            TypedQuery<User> query=entityManager.createQuery("SELECT u FROM User u WHERE u.email= :email",User.class).setParameter("email", email);
+//            System.out.println(query.getResultList()+"***"+email);
+//            return true;
+//
+//
+//
+//        }
+//        catch (Exception e){
+//            System.out.println(e);
+//            return true;
+//        }
+//
+//
+//    }
 }

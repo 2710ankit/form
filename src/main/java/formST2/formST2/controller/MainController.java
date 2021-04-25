@@ -48,12 +48,12 @@ public class MainController {
         userService.deleteInfo(email);
     }
 
-    @RequestMapping(method = RequestMethod.POST,value = "/mainpage/findByEmail")
-    public boolean findByEmail(@RequestBody String email){
-        System.out.println("findBBYId");
-        return userService.findByEmail(email);
-
-    }
+//    @RequestMapping(method = RequestMethod.POST,value = "/mainpage/findByEmail")
+//    public boolean findByEmail(@RequestBody String email){
+//        System.out.println("findBBYId");
+//        return userService.findByEmail(email);
+//
+//    }
 
 
 

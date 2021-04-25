@@ -27,7 +27,7 @@ public class UserService {
         userRepository.deleteInfo(email);
     }
 
-    public boolean findByEmail(String email) {
-        return userRepository.findByEmail(email);
-    }
+//    public boolean findByEmail(String email) {
+//        return userRepository.findByEmail(email);
+//    }
 }

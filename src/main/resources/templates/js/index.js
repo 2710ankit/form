@@ -28,19 +28,19 @@ function fun(){
         return;
     }
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST","http://localhost:8080/mainpage/findByEmail", true)
-    xhr.onreadystatechange = function (){
-        if(this.readyStage==4 && this.status==400){
-            console.log(this.responseText);
-        }
-        else {
-            console.log(this.readyState);
-        }
-    }
-    console.log(typeof email+"typo");
-    xhr.send(JSON.stringify(email));
-    var funResponse=xhr.responseText;
+    // var xhr = new XMLHttpRequest();
+    // xhr.open("POST","http://localhost:8080/mainpage/findByEmail", true)
+    // xhr.onreadystatechange = function (){
+    //     if(this.readyStage==4 && this.status==400){
+    //         console.log(this.responseText);
+    //     }
+    //     else {
+    //         console.log(this.readyState);
+    //     }
+    // }
+    // console.log(typeof email+"typo");
+    // xhr.send(JSON.stringify(email));
+    // var funResponse=xhr.responseText;
 
 
 
@@ -50,8 +50,8 @@ function fun(){
 
 
 
-    if(funResponse==true)
-    {
+    // if(funResponse==true)
+    // {
         var xhr1 = new XMLHttpRequest();
         xhr1.open("POST", "http://localhost:8080/mainpage", true);
 
@@ -71,10 +71,10 @@ function fun(){
 
         xhr1.send(JSON.stringify(json));
         viewdata(name1, email, mobile);
-    }
-    else{
-        alert("this email is already taken");
-    }
+    // }
+    // else{
+    //     alert("this email is already taken");
+    // }
 
 }
 
@@ -124,6 +124,11 @@ function viewdata( name, email, mobile){
 function del(delBtn){
    var email= delBtn.parentNode.parentNode.querySelector("#blockDiv").innerHTML;
     console.log(email);
+
+        //no clue what to put here?
+        var p=delBtn.parentNode.parentNode;
+        p.parentNode.removeChild(p);
+
 
     var xhr=new XMLHttpRequest()
     xhr.open("DELETE","http://localhost:8080/mainpage",true);
