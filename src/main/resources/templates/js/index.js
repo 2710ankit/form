@@ -67,7 +67,7 @@ function viewdata( name, email, mobile){
         data1.innerHTML=name;
         data2.innerHTML=mobile;
         data3.appendChild(div);
-        data4.innerHTML="<button onclick=del(this) style='height:18px; background-color: antiquewhite;'>Delete</button>";
+        data4.innerHTML="<button onclick=del(this) class='delBtn' >Delete</button>";
 
         row.appendChild(data1);
         row.appendChild(data2);
