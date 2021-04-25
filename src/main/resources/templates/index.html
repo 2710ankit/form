@@ -1,0 +1,74 @@
+<html>
+  <head>
+      <link rel="stylesheet" href="style/index.css">
+  </head>  
+<body onload="getfun()" >
+
+<div id="mainDiv">
+<div style="text-align: center;"><h2>Details Form</h2></div>
+<hr>
+    <table id="mainTable">
+     <tr>
+       <td>
+        <span>Name: </span>
+       </td>
+       <td>
+        <input type="text" id="name" placeholder="Enter Name"  minlength="3" >
+       </td>
+    </tr>
+    <tr>
+        <td>
+         <span>Mob. No:  </span>
+        </td>
+        <td>
+         <input type="number" id="mobileNumber" placeholder="Enter Mobile Number" minlength="10" maxlength="10">
+        </td>
+    </tr>
+    <tr>
+      <td>
+       <span>Email Id: </span>
+      </td>
+      <td>
+       <input type="email" id="email" placeholder="Enter Email Id">
+      </td>
+    </tr> 
+    <tr> 
+      <td>
+
+      </td>
+      <td>
+       <button onclick="fun()"  id="submitBtn" >Submit</button>
+      </td>
+
+
+
+    </tr>
+</table>
+    <div>
+    <input id="searchBar" placeholder="Enter the name here" style="margin-left: 20px;width: 250px;">
+    <button id="searchBtn" style="float: right;margin-right: 20px;height: 25px;">Search</button>
+    </div>
+<div >
+    <table id="table">
+            <tr>
+                <td>
+                   <p>Name</p>
+                </td>
+                <td>
+                    <p>Mob. No</p>
+                </td>
+                <td>
+                   <p> Email Id</p>
+                </td>
+                <td>
+                   
+                </td>
+            </tr>
+        
+    </table>
+</div>
+</div>
+
+<script src="js/index.js"></script>
+</body>
+</html>

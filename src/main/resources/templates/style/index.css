@@ -1,0 +1,37 @@
+#mainDiv{
+    background-color: rgb(175, 177, 204);
+    width: 400px;
+    margin-top: 100px;
+    margin-left: 200px;
+    border: 2px solid black;
+}
+#mainTable input{
+    margin-left: 30px;
+    margin-top: 10px;
+
+}
+
+
+#mainTable span{
+    margin-left: 20px;
+    margin-top: 10px;
+   
+}
+#mainTable button{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+#blockDiv{
+    white-space: nowrap; 
+  width: 50px; 
+  overflow: hidden;
+}
+#blockDiv:hover{
+    overflow-x: scroll;
+}
+#table td{
+  padding-left: 20px;
+}
+button{
+    height: 35px;width: 80px;background-color: bisque;
+}
