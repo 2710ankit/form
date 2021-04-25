@@ -23,7 +23,7 @@ public class UserRepository {
 
 
     }
-
+    Boolean userPresent = false;
     public void postinfo(User user) {
         EntityManager entityManager= entityManagerFactory.createEntityManager();
         EntityTransaction entityTransaction= entityManager.getTransaction();
@@ -32,10 +32,12 @@ public class UserRepository {
             entityTransaction.begin();
             entityManager.persist(user);
             entityTransaction.commit();
+            userPresent= false;
 
         }
         catch (Exception e){
-            System.out.println(e);
+            System.out.println("**********"+e+"*********");
+            userPresent=true;
             entityTransaction.rollback();
         }
 
@@ -59,6 +61,12 @@ public class UserRepository {
           entityTransaction.rollback();
       }
     }
+
+    public Boolean checkUser() {
+        return userPresent;
+    }
+
+
 //
 //    public boolean findByEmail(String email) {
 //        EntityManager entityManager= entityManagerFactory.createEntityManager();
@@ -66,7 +74,15 @@ public class UserRepository {
 //
 //            TypedQuery<User> query=entityManager.createQuery("SELECT u FROM User u WHERE u.email= :email",User.class).setParameter("email", email);
 //            System.out.println(query.getResultList()+"***"+email);
-//            return true;
+//            if(query.getResultList()==null) {
+//                System.out.println("if loop");
+//                return true;
+//
+//            }
+//            else {
+//                System.out.println("else loop");
+//                return false;
+//            }
 //
 //
 //

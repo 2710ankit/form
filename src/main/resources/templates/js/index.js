@@ -8,9 +8,7 @@ function getfun(){
             console.log(data.length);
             for(var i=0;i<data.length;i++){
                 showall(data[i]);
-                console.log(data[i]+"-");
              }
-             console.log(this.responseText);
          }
          else
              console.log(this.readyState);
@@ -31,25 +29,28 @@ function fun(){
     // var xhr = new XMLHttpRequest();
     // xhr.open("POST","http://localhost:8080/mainpage/findByEmail", true)
     // xhr.onreadystatechange = function (){
-    //     if(this.readyStage==4 && this.status==400){
-    //         console.log(this.responseText);
+    //     if(this.readyStage==4 && this.status==200){
+    //         console.log("response text in if"+this.responseText);
     //     }
     //     else {
     //         console.log(this.readyState);
     //     }
     // }
     // console.log(typeof email+"typo");
-    // xhr.send(JSON.stringify(email));
+    // console.log("response text"+xhr.responseText);
     // var funResponse=xhr.responseText;
-
-
-
-
-
-
-
-
-
+    // console.log("funResponse"+funResponse);
+    // xhr.send(JSON.stringify(email));
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     // if(funResponse==true)
     // {
         var xhr1 = new XMLHttpRequest();
@@ -57,8 +58,17 @@ function fun(){
 
         xhr1.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                console.log(name1);
+                console.log("***user"+ typeof this.responseText);
                 console.log("post req success");
+                if(this.responseText == 'false') {
+                    console.log("false lop");
+                    viewdata(name1, email, mobile);
+                }
+                else {
+                    console.log("true lop");
+                    alert("this email is already taken");
+                }
+
             } else
                 console.log(this.readyState);
         }
@@ -70,8 +80,8 @@ function fun(){
 
 
         xhr1.send(JSON.stringify(json));
-        viewdata(name1, email, mobile);
-    // }
+
+    //}
     // else{
     //     alert("this email is already taken");
     // }
@@ -107,9 +117,6 @@ function viewdata( name, email, mobile){
         data3.appendChild(div);
         data4.innerHTML="<button onclick=del(this) style='height:18px; background-color: antiquewhite;'>Delete</button>";
 
-        console.log(email);
-        console.log(name);
-        console.log(mobile);
 
         row.appendChild(data1);
         row.appendChild(data2);

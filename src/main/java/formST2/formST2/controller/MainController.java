@@ -35,11 +35,11 @@ public class MainController {
 
 
     @RequestMapping(method = RequestMethod.POST,value = "/mainpage")
-    public  void addValue(@RequestBody String name) throws JsonProcessingException {
+    public  Boolean addValue(@RequestBody String name) throws JsonProcessingException {
         User user = new ObjectMapper().readValue(name,User.class);
         userService.postinfo(user);
-
-
+        System.out.println(userService.checkUser());
+        return userService.checkUser();
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value ="/mainpage" )
