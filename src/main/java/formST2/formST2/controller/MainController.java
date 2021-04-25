@@ -19,13 +19,7 @@ public class MainController {
      UserService userService;
 
   public  ArrayList<User> user= new ArrayList<User>();
-//
-//    {
-//        User user1 = new User("ankit", "1435455435", "kjdnka@ad.com");
-//        User user2 = new User("asd", "74224297294", "kjdnka@ad.com");
-//        user.add(user1);
-//        user.add(user2);
-//    }
+
 
     @RequestMapping(value = "/mainpage")
     public List getinfo(){
@@ -48,12 +42,6 @@ public class MainController {
         userService.deleteInfo(email);
     }
 
-//    @RequestMapping(method = RequestMethod.POST,value = "/mainpage/findByEmail")
-//    public boolean findByEmail(@RequestBody String email){
-//        System.out.println("findBBYId");
-//        return userService.findByEmail(email);
-//
-//    }
 
 
 

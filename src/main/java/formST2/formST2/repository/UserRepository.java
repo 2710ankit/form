@@ -36,7 +36,6 @@ public class UserRepository {
 
         }
         catch (Exception e){
-            System.out.println("**********"+e+"*********");
             userPresent=true;
             entityTransaction.rollback();
         }
@@ -66,32 +65,4 @@ public class UserRepository {
         return userPresent;
     }
 
-
-//
-//    public boolean findByEmail(String email) {
-//        EntityManager entityManager= entityManagerFactory.createEntityManager();
-//        try{
-//
-//            TypedQuery<User> query=entityManager.createQuery("SELECT u FROM User u WHERE u.email= :email",User.class).setParameter("email", email);
-//            System.out.println(query.getResultList()+"***"+email);
-//            if(query.getResultList()==null) {
-//                System.out.println("if loop");
-//                return true;
-//
-//            }
-//            else {
-//                System.out.println("else loop");
-//                return false;
-//            }
-//
-//
-//
-//        }
-//        catch (Exception e){
-//            System.out.println(e);
-//            return true;
-//        }
-//
-//
-//    }
 }

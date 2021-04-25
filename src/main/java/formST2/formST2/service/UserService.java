@@ -31,8 +31,4 @@ public class UserService {
         return  userRepository.checkUser();
     }
 
-
-//    public boolean findByEmail(String email) {
-//        return userRepository.findByEmail(email);
-//    }
 }
