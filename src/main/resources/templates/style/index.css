@@ -41,6 +41,7 @@ body{
 #table td{
   padding-left: 20px;
     padding-top: 10px;
+
 }
 #table th{
     padding-left: 20px;
@@ -57,4 +58,7 @@ button{
     background-color: #e26d6c;
     border: none;
     border-radius: 5px;
+}
+.tableRow{
+    margin-top: 10px;
 }

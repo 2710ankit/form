@@ -63,6 +63,7 @@ function viewdata( name, email, mobile){
         var div=document.createElement('div');
 
         div.setAttribute("id","blockDiv");
+        row.setAttribute('class','tableRow');
         div.innerHTML=email;
         data1.innerHTML=name;
         data2.innerHTML=mobile;
@@ -105,7 +106,10 @@ function searchFun(){
     var Parent = document.getElementById('table');
     while(Parent.hasChildNodes())
     {
-        Parent.removeChild(Parent.firstChild);
+        if(Parent.childElementCount ==1){
+            break;
+        }
+        Parent.removeChild(Parent.lastChild);
     }
     var xhr= new XMLHttpRequest();
     xhr.open("POST","http://localhost:8080/mainpage/search");
