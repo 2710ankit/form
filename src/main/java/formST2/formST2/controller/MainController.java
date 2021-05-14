@@ -6,6 +6,7 @@ import formST2.formST2.Model.User;
 import formST2.formST2.service.UserService;
 import org.hibernate.sql.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -22,9 +23,10 @@ public class MainController {
 
 
     @RequestMapping(value = "/mainpage")
-    public List getinfo(){
+    public List getinfo(Model model){
         System.out.println("get request");
         return userService.getallinfo();
+
     }
 
 

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+
+body{
+    background-color: darkslategray;
+    display: flex;
+    justify-content: center;
+
+}
+#mainDiv{
+    width: auto;
+    min-height: 300px;
+    background-color: #e2d8ba;
+    border-radius: 20px;
+    box-shadow: 20px 20px 100px 100px #3b6958;
+}
+#mainDiv h2{
+    font-family: 'Girassol', cursive;
+    text-shadow: 10px 10px 11px darkslategray;
+}
+
+
+#mainTable input{
+    margin-left: 30px;
+    margin-top: 10px;
+    height: 30px;
+    width: auto;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 100px;
+    padding: 5px;
+    outline: none;
+
+}
+
+#mainTable span{
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: large;
+   
+}
+#mainTable button{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+#blockDiv{
+    white-space: nowrap; 
+  width: auto;
+
+  overflow: hidden;
+}
+#blockDiv:hover{
+    overflow-x: scroll;
+}
+#table td{
+  padding-left: 20px;
+    padding-top: 10px;
+
+}
+#table th{
+    padding-left: 20px;
+    padding-top: 15px;
+}
+button{
+    height: 35px;width: 80px;
+    background-color: #82e26e;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-top: 5px;
+}
+
+#search{
+    width: auto;
+    height: 30px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 100px;
+    padding: 5px;
+    outline: none;
+    margin-right: 20px;
+}
+
+.delBtn {
+    height:18px;
+    background-color: #e26d6c;
+    border: none;
+    border-radius: 5px;
+}
+.tableRow{
+    margin-top: 10px;
+
+}
+.tableRow td{
+    font-size: 20px;
+    padding: 10px;
+}
